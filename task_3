@@ -1,1 +1,9 @@
-
+with open('file1.txt', 'r', encoding='utf-8') as f:
+    file1 = f.read()
+with open('file2.txt', 'r', encoding='utf-8') as f:
+    file2 = f.read()
+with open('file3.txt', 'r', encoding='utf-8') as f:
+    file3 = f.read()
+combined = f"<<<Содержимое file1.txt>>>\n{file1}\n<<<Содержимое file2.txt>>>\n{file2}\n<<<Содержимое file3.txt>>>\n{file3}"
+with open('combined.txt', 'w', encoding='utf-8') as f:
+    f.write(combined)
