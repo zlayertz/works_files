@@ -16,5 +16,5 @@ else:
 with open('search_results.txt', 'w', encoding='utf-8') as f:
     f.write(f"Слово: {word}\n")
     f.write(f"Найдено: {'да' if numbers else 'нет'}\n")
-    f.write(f"Вхождений: {total}\n")
-    f.write(f"Строки: {numbers}\n")
+    f.write(f"Встречается раз: {total}\n")
+    f.write(f"Найдено в строке: {numbers}\n")
