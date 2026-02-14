@@ -1,1 +1,20 @@
-
+word = input('Введите слово для поиска:')
+with open('text.txt', 'r', encoding='utf-8') as f:
+    lines = f.readlines()
+numbers = []
+total = 0
+for i in range(len(lines)):
+    if word in lines[i].split():
+        numbers.append(i + 1)
+        total += lines[i].split().count(word)
+if numbers:
+    print(f"Слово найдено")
+    print(f"Встречается раз: {total}")
+    print(f"Найдено в строке: {numbers}")
+else:
+    print('Слово не найдено')
+with open('search_results.txt', 'w', encoding='utf-8') as f:
+    f.write(f"Слово: {word}\n")
+    f.write(f"Найдено: {'да' if numbers else 'нет'}\n")
+    f.write(f"Вхождений: {total}\n")
+    f.write(f"Строки: {numbers}\n")
