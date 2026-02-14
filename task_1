@@ -1,1 +1,9 @@
-
+with open('input.txt', 'r', encoding='utf-8') as f:
+    lines = f.readlines()
+lines_count = len(lines)
+words_count = 0
+for line in lines:
+    words_count += len(line.split())
+with open('statistics.txt', 'w', encoding='utf-8') as f:
+    f.write(f"Количество строк: {lines_count}\n")
+    f.write(f"Количество слов: {words_count}\n")
