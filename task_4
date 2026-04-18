@@ -1,14 +1,14 @@
-with open('secret.txt', 'r', encoding='utf-8') as f:
-    text = f.read()
+with open('secret.txt', 'r', encoding='utf-8') as file:
+    text = file.read()
 encrypted = ''
 for char in text:
     encrypted += chr(ord(char) + 3)
-with open('encrypted.txt', 'w', encoding='utf-8') as f:
-    f.write(encrypted)
-with open('encrypted.txt', 'r', encoding='utf-8') as f:
-    encrypted_text = f.read()
+with open('encrypted.txt', 'w', encoding='utf-8') as file:
+    file.write(encrypted)
+with open('encrypted.txt', 'r', encoding='utf-8') as file:
+    encrypted_text = file.read()
 decrypted = ''
 for char in encrypted_text:
     decrypted += chr(ord(char) - 3)
-with open('decrypted.txt', 'w', encoding='utf-8') as f:
-    f.write(decrypted)
+with open('decrypted.txt', 'w', encoding='utf-8') as file:
+    file.write(decrypted)
