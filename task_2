@@ -1,4 +1,4 @@
-word = input('Введите слово для поиска:')
+word = input('Введите слово для поиска: ')
 with open('text.txt', 'r', encoding='utf-8') as file:
     lines = file.readlines()
 numbers = []
@@ -15,6 +15,6 @@ else:
     print('Слово не найдено')
 with open('search_results.txt', 'w', encoding='utf-8') as file:
     file.write(f'Слово: {word}\n')
-    file.write(f''Найдено: {'да' if numbers else 'нет'}\n'')
+    file.write(f"Найдено: {'да' if numbers else 'нет'}\n")
     file.write(f'Встречается раз: {total}\n')
     file.write(f'Найдено в строке: {numbers}\n')
